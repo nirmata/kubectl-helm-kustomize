@@ -1,2 +1,2 @@
 # kubectl-helm-kustomize
-Dockerfile for kubectl, helm and kustomize binaries 
+Dockerfile for creating image with kubectl, helm and kustomize binaries 
