@@ -24,7 +24,11 @@ RUN set -ex; \
 # Runtime
 FROM alpine:3.16.0 AS runtime
 
+RUN apk -U upgrade && apk add bash
+
 COPY --from=downloader /downloads/kubectl /usr/local/bin/kubectl
 COPY --from=downloader /downloads/kustomize /usr/local/bin/kustomize
 COPY --from=downloader /downloads/helm /usr/local/bin/helm
+
+CMD bash
 
